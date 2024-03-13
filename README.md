@@ -4,8 +4,23 @@ This is a learning situation, to demonstrate your capabilities regarding testing
 
 ## Setup
 
-Fork and clone the repository. There is a _Gemfile_, so install the dependencies
-with `bundle install`. The only dependency is rspec.
+1. Fork this repo.
+
+2. Outside your Docker container, in the same directory as your
+   `compose.yml` file, clone the repository.
+
+3. Edit `compose.yml`. You need to add the following line to the
+   `volumes` section:
+
+   ```
+   - ./cs362-cold-beverages-Wi2024:/home/user/cs362-cold-beverages-Wi2024
+   ```
+
+4. Run the container. You should be able to see your
+   `cs362-cold-beverages-Wi2024` directory in there
+
+There is a _Gemfile_, so install the dependencies with `bundle install`.
+The only dependency is rspec.
 
 ## Scenario
 
