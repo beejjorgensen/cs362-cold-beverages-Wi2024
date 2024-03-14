@@ -1,4 +1,4 @@
-class WaterDispenser
+﻿class WaterDispenser
 
   attr_reader :reservoir
 
@@ -7,7 +7,9 @@ class WaterDispenser
   end
 
   def dispense(vessel)
-    reservoir.drain(vessel.volume)
+    water = Item.new('Water', reservoir.drain(vessel.volume))
+    vessel.fill(water)
+    return water.volume#allow the test to pass with a plain value
   end
 
 end

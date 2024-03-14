@@ -16,8 +16,13 @@
     @current_water_volume = capacity#BUG missing @'s
   end
 
+  #Added check for volume
   def drain(volume)
-    self.current_water_volume -= volume
+    if(self.current_water_volume >= volume)
+      self.current_water_volume -= volume
+    else
+      self.current_water_volume = 0
+    end
   end
 
 end
