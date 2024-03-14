@@ -12,7 +12,7 @@
     @contents.empty?
   end
 
-  def fill
-    @contents.append('FAKE_THING')
+  def fill(new_thing = 'FAKE_THING')
+    @contents.append(new_thing)
   end
 end

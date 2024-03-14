@@ -1,4 +1,4 @@
-class Item
+﻿class Item
   attr_reader :name, :volume
 
   def initialize(name, volume)
