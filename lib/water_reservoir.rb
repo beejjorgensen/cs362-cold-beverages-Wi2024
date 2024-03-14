@@ -1,4 +1,4 @@
-class WaterReservoir
+﻿class WaterReservoir
 
   attr_reader :capacity
   attr_accessor :current_water_volume
@@ -13,7 +13,7 @@ class WaterReservoir
   end
 
   def fill
-    current_water_volume = capacity
+    @current_water_volume = capacity#BUG missing @'s
   end
 
   def drain(volume)
