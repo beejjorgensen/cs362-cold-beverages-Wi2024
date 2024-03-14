@@ -13,6 +13,10 @@ class Vessel
     @full = 1
   end
 
+  def full?
+    @full == 1
+  end
+
   def empty?
     @full.zero?
   end
