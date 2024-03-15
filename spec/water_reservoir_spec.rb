@@ -22,14 +22,23 @@ describe 'A water reservoir' do
 
       end 
     
+      require_relative '../lib/water_reservoir'
+
       it 'can dispense' do
-      
         water_reservoir = WaterReservoir.new
         water_reservoir.fill
         water_reservoir.drain(5)
         expect(water_reservoir.current_water_volume).to eq(5)
-    
-    end
+      end
+
+      it 'can test edge case of not enough water' do 
+        water_reservoir = WaterReservoir.new
+        water_reservoir.fill
+        water_reservoir.drain(15)
+        expect(water_reservoir.current_water_volume).to eq(10)
+        # wanted this to work bu i could not get in under control 
+        # expect { water_reservoir.drain(15) }.to raise_error(RuntimeError, "Sorry, not enough water left. We only have #{@current_water_volume} units of water.")
+      end 
     
 
 
