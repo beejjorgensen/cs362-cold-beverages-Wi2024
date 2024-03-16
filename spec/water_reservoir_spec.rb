@@ -4,7 +4,7 @@ describe 'A water reservoir' do
 
     it 'has default capacity and current water volume' do
         reservoir = WaterReservoir.new
-        expect(reservoir.capacity).to eq(10)
+        expect(reservoir.capacity).to eq(100)
         expect(reservoir.current_water_volume).to eq(0)
     end
 
