@@ -32,3 +32,4 @@ class Freezer
   end
 
 end
+ 

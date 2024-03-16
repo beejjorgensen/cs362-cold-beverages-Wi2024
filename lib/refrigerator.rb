@@ -14,7 +14,7 @@ class Refrigerator
   def chill(item)
     chiller.add(item)
   end
-
+ 
   def freeze(item)
     freezer.add(item)
   end
