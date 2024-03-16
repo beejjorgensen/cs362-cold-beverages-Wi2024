@@ -1,5 +1,5 @@
 class Vessel
-  attr_reader :name, :volume
+  attr_reader :name, :volume, :volume_filled
 
   def initialize(name, volume)
     @name = name
