@@ -15,4 +15,10 @@ describe 'A water dispenser' do
         expect(water_dispenser.reservoir.current_water_volume).to eq(40)
     end
 
+    it "fills the reservoir" do
+        water_dispenser = WaterDispenser.new(WaterReservoir.new(100, 50))
+        water_dispenser.fill
+        expect(water_dispenser.reservoir.current_water_volume).to eq(100)
+    end
+
 end
