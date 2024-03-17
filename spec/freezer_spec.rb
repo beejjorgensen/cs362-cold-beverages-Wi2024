@@ -24,11 +24,12 @@ describe 'A freezer' do
     expect(freezer.contents).to eq(['ice cream'])
   end
 
-  # it 'can report its remaining capacity' do
-  #   expect(freezer.remaining_capacity).to eq(100)
-  #   freezer.add('ice cream')
-  #   expect(freezer.remaining_capacity).to eq(99)
-  # end
+  it 'can report its remaining capacity' do
+    expect(freezer.remaining_capacity).to eq(100)
+    ice_cream = Item.new('ice cream', 1)
+    freezer.add(ice_cream)
+    expect(freezer.remaining_capacity).to eq(99)
+  end
 
   # it 'can have its temperature set' do
   #   expect(freezer.temperature).to eq(70)
