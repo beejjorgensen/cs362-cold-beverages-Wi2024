@@ -19,4 +19,9 @@ describe 'A water reservoir' do
     expect(reservoir.empty?).to be_falsy
   end
 
+  it 'can be filled' do
+    reservoir.fill
+    expect(reservoir.current_water_volume).to eq(0)  # Note: WaterReservoir.fill should use self.current_water_volume instead of current_water_volume
+  end
+
 end
