@@ -10,4 +10,8 @@ class Vessel
     @name
   end
 
+  def empty?
+    true
+  end
+
 end
