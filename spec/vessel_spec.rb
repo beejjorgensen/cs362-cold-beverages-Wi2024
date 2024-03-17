@@ -9,7 +9,7 @@ describe 'A vessel for holding liquid' do
   end
 
   it 'is initially empty' do
-    skip
+    # skip
     vessel = Vessel.new('FAKE', 100)
     expect(vessel).to be_empty
   end
