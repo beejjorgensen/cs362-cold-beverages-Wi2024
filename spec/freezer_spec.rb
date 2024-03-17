@@ -31,10 +31,10 @@ describe 'A freezer' do
     expect(freezer.remaining_capacity).to eq(99)
   end
 
-  # it 'can have its temperature set' do
-  #   expect(freezer.temperature).to eq(70)
-  #   freezer.set_level(1)
-  #   expect(freezer.temperature).to eq(60)
-  # end
+  it 'can have its temperature set' do
+    expect(freezer.temperature).to eq(70)
+    freezer.set_level(1)
+    expect(freezer.temperature).to eq(60)
+  end
 
 end
