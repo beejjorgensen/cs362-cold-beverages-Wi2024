@@ -67,4 +67,10 @@ describe 'A refrigerator' do
     expect(fridge.chiller.temperature).to eq(45)  # level*5 less than room temp (70)
   end
 
+  it "can set it's freezer's level" do
+    fridge.set_freezer_level(5)
+
+    expect(fridge.freezer.temperature).to eq(20)  # level*10 less than room temp (70)
+  end
+
 end
