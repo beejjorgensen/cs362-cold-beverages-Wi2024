@@ -61,4 +61,10 @@ describe 'A refrigerator' do
     expect(fridge.freezer.instance_variable_get(:@power)).to eq(:off)
   end
 
+  it "can set it's chiller's level" do
+    fridge.set_chiller_level(5)
+
+    expect(fridge.chiller.temperature).to eq(45)  # level*5 less than room temp (70)
+  end
+
 end
