@@ -6,4 +6,8 @@ class Vessel
     @volume = volume
   end
 
+  def name
+    @name
+  end
+
 end
