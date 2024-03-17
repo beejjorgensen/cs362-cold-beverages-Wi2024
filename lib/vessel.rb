@@ -4,6 +4,15 @@ class Vessel
   def initialize(name, volume)
     @name = name
     @volume = volume
+    @empty = true
+  end
+
+  def name
+    @name
+  end
+
+  def volume
+    @volume
   end
 
 end
