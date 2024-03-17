@@ -30,4 +30,10 @@ describe 'A water reservoir' do
     expect(reservoir.current_water_volume).to eq(5)
   end
 
+  it "can't drain more than it has" do
+    reservoir.current_water_volume = 5
+    expect(reservoir.drain(10)).to eq(5)
+    expect(reservoir.current_water_volume).to eq(0)
+  end
+
 end
