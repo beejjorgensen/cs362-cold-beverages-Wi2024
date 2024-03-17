@@ -31,4 +31,8 @@ describe 'A refrigerator' do
     expect(fridge.freezer.remaining_capacity).to eq(100 - 1)  # Freezer capacity - item volume
   end
 
+  it "knows it's total capacity" do
+    expect(fridge.total_capacity).to eq(100 + 100)  # Chiller capacity + freezer capacity
+  end
+
 end
