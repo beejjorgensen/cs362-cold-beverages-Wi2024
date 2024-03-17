@@ -15,4 +15,8 @@ class Vessel
     @volume
   end
 
+  def empty?
+    @empty
+  end
+
 end
