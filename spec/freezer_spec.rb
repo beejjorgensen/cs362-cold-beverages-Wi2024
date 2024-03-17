@@ -27,4 +27,11 @@ describe 'A freezer' do
     expect(freezer.instance_variable_get(:@contents)).to contain_exactly(item)
   end
 
+  it "knows it's remaining capacity" do
+    item = Item.new("Item", 10)
+    freezer.add(item)
+
+    expect(freezer.remaining_capacity).to eq(100 - 10)  # Freezer capacity - item volume
+  end
+
 end
