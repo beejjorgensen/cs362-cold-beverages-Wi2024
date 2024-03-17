@@ -17,7 +17,8 @@ class WaterReservoir
   end
 
   def drain(volume_amount)
-    self.volume -= volume_amount
+    remaining_volume = [volume_amount, volume].min
+    self.volume -= remaining_volume
   end
 
 end
