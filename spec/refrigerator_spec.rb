@@ -53,5 +53,12 @@ describe 'A refrigerator' do
     expect(fridge.freezer.instance_variable_get(:@power)).to eq(:on)
   end
 
+  it 'can be unplugged' do
+    fridge.unplug
+
+    expect(fridge.instance_variable_get(:@power)).to eq(:off)
+    expect(fridge.chiller.instance_variable_get(:@power)).to eq(:off)
+    expect(fridge.freezer.instance_variable_get(:@power)).to eq(:off)
+  end
 
 end
