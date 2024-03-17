@@ -16,4 +16,9 @@ describe 'A freezer' do
     expect(freezer.instance_variable_get(:@power)).to eq(:on)
   end
 
+  it 'can be turned off' do
+    freezer.turn_off
+    expect(freezer.instance_variable_get(:@power)).to eq(:off)
+  end
+
 end
