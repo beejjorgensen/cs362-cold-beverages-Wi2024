@@ -34,4 +34,9 @@ describe 'A freezer' do
     expect(freezer.remaining_capacity).to eq(100 - 10)  # Freezer capacity - item volume
   end
 
+  it "can set it's level" do
+    freezer.set_level(5)
+    expect(freezer.temperature).to eq(20)  # level*10 less than room temp (70)
+  end
+
 end
