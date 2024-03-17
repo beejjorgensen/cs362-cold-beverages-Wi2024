@@ -18,11 +18,11 @@ describe 'A freezer' do
     expect(freezer.power).to eq(:off)
   end
 
-  # it 'can have items added to it' do
-  #   expect(freezer.contents).to eq([])
-  #   freezer.add('ice cream')
-  #   expect(freezer.contents).to eq(['ice cream'])
-  # end
+  it 'can have items added to it' do
+    expect(freezer.contents).to eq([])
+    freezer.add('ice cream')
+    expect(freezer.contents).to eq(['ice cream'])
+  end
 
   # it 'can report its remaining capacity' do
   #   expect(freezer.remaining_capacity).to eq(100)
