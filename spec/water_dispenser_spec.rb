@@ -14,5 +14,6 @@ describe 'A water dispenser' do
         initial_water_level=water_dispenser.reservoir.current_water_volume
         water_dispenser.dispense(vessel)
         expect(initial_water_level-water_dispenser.reservoir.current_water_volume).to eq(5)
+        expect(vessel).to_not be_empty
     end
 end
