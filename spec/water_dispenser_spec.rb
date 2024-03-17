@@ -8,9 +8,10 @@ describe 'A water dispenser' do
   end
 
   it 'dispenses water' do
-    water_dispenser = WaterDispenser.new
-    vessel = Vessel.new
-    expect(water_dispenser.dispense(vessel)).to eq('Water dispensed!')
+    water_reservoir = WaterReservoir.new(200, 150)
+    water_dispenser = WaterDispenser.new(water_reservoir)
+    vessel = Vessel.new('cup', 100)
+    expect(water_dispenser.dispense(vessel)).to eq(50)
   end
 
 end
