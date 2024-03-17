@@ -1,23 +1,24 @@
 class WaterReservoir
 
   attr_reader :capacity
-  attr_accessor :current_water_volume
+  attr_accessor :volume
 
   def initialize(capacity = 10, initial_water_volume = 0)
     @capacity = capacity
-    @current_water_volume = initial_water_volume
+    @volume = initial_water_volume
   end
 
   def empty?
-    current_water_volume == 0
+    volume == 0
   end
 
   def fill
-    current_water_volume = capacity
+    self.volume = capacity
   end
 
-  def drain(volume)
-    self.current_water_volume -= volume
+  def drain(volume_amount)
+    remaining_volume = [volume_amount, volume].min
+    self.volume -= remaining_volume
   end
 
 end
