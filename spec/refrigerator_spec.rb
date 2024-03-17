@@ -17,4 +17,11 @@ describe 'A refrigerator' do
     expect(fridge.remaining_capacity).to eq(170)
   end
 
+  it 'can be plugged in and unplugged' do
+    fridge.plug_in
+    expect(fridge.power).to eq(:on)
+    fridge.unplug
+    expect(fridge.power).to eq(:off)
+  end
+
 end
