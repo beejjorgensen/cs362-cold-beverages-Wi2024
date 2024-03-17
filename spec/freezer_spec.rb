@@ -10,13 +10,13 @@ describe 'A freezer' do
     expect(freezer.contents).to eq([])
   end
 
-  # it 'can be turned on and off' do
-  #   expect(freezer.power).to eq(:off)
-  #   freezer.turn_on
-  #   expect(freezer.power).to eq(:on)
-  #   freezer.turn_off
-  #   expect(freezer.power).to eq(:off)
-  # end
+  it 'can be turned on and off' do
+    expect(freezer.power).to eq(:off)
+    freezer.turn_on
+    expect(freezer.power).to eq(:on)
+    freezer.turn_off
+    expect(freezer.power).to eq(:off)
+  end
 
   # it 'can have items added to it' do
   #   expect(freezer.contents).to eq([])
