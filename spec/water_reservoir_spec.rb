@@ -15,7 +15,18 @@ describe 'A water reservoir' do
         expect(reservoir.empty?).to be true
     end
 
-    context 'when draining water' do
+    context 'when being filled' do
+        let(:reservoir) { WaterReservoir.new(10, 5) }
+
+        it 'can be filled with water, increasing its volume' do
+            filling_volume = 3
+            reservoir.fill(filling_volume)
+            expect(reservoir.current_water_volume).to eq(8)
+        end
+
+    end 
+
+    context 'when draining the reservoir' do
         let(:reservoir) { WaterReservoir.new(10, 5) }
 
         it 'lowers the current water volume level' do
