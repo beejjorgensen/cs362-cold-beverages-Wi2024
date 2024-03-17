@@ -45,5 +45,13 @@ describe 'A refrigerator' do
     expect(fridge.remaining_capacity).to eq(100 + 100 - 2 - 3)  # Chiller capacity + freezer capacity - both item volumes
   end
 
+  it 'can be plugged in' do
+    fridge.plug_in
+
+    expect(fridge.instance_variable_get(:@power)).to eq(:on)
+    expect(fridge.chiller.instance_variable_get(:@power)).to eq(:on)
+    expect(fridge.freezer.instance_variable_get(:@power)).to eq(:on)
+  end
+
 
 end
