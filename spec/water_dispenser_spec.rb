@@ -15,6 +15,7 @@ describe 'A water dispenser' do
     dispenser.dispense(vessel)
 
     expect(reservoir).to have_received(:drain).with(vessel.volume)
+    expect(vessel).to_not be_empty
   end
 
 end
