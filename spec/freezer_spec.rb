@@ -11,4 +11,9 @@ describe 'A freezer' do
     expect(freezer.instance_variable_get(:@contents)).to eq([])
   end
 
+  it 'can be turned on' do
+    freezer.turn_on
+    expect(freezer.instance_variable_get(:@power)).to eq(:on)
+  end
+
 end
