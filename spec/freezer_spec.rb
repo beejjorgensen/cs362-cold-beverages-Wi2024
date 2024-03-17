@@ -21,4 +21,10 @@ describe 'A freezer' do
     expect(freezer.instance_variable_get(:@power)).to eq(:off)
   end
 
+  it 'can add an item' do
+    item = Item.new("Item", 1)
+    freezer.add(item)
+    expect(freezer.instance_variable_get(:@contents)).to contain_exactly(item)
+  end
+
 end
