@@ -11,7 +11,7 @@ describe 'A water dispenser' do
         expect(wd.reservoir).to eq(reservoir)
     end
 
-    it 'can dipsense a volume of water' do
+    it 'can dispense a volume of water' do
         wd = WaterDispenser.new(reservoir)
         expect(reservoir).to receive(:drain).with(100)
         wd.dispense(vessel)
