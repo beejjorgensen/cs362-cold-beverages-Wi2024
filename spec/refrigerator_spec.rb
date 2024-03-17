@@ -17,4 +17,11 @@ describe 'A refrigerator' do
     expect(fridge).to respond_to(:water_reservoir)
   end
 
+  it 'can add an item to the chiller' do
+    item = Item.new("Item", 1)
+    fridge.chill(item)
+
+    expect(fridge.chiller.remaining_capacity).to eq(100 - 1)  # Chiller capacity - item volume
+  end
+
 end
