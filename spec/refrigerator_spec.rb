@@ -73,4 +73,8 @@ describe 'A refrigerator' do
     expect(fridge.freezer.temperature).to eq(20)  # level*10 less than room temp (70)
   end
 
+  it "has a string representation that includes it's power status, remaining storage, temperatures, and remaining water" do
+    expect(fridge.to_s).to eq "Power: off\nStorage: 200 of 200 available\nTemps: Chiller is 70, Freezer is 70\nWater: Reservoir has 0 remaining.\n"
+  end
+
 end
