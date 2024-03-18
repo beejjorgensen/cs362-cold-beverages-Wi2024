@@ -1,0 +1,10 @@
+{
+  "name": "cs362 codespace",
+  "dockerFile": "Dockerfile",
+  "settings": {
+    // Add any settings you want to apply to your codespace
+  },
+  "extensions": [
+    // Add any extensions you want to install in your codespace
+  ]
+}

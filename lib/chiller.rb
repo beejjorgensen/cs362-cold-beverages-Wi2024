@@ -23,6 +23,10 @@ class Chiller
     @contents << item
   end
 
+  def get_power
+    return @power
+  end
+
   def remaining_capacity
     capacity - @contents.map(&:volume).reduce(:+).to_i
   end
