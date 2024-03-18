@@ -20,4 +20,11 @@ describe 'A chiller' do
         chiller.turn_off
         expect(chiller.power).to eq(:off)
     end
+
+    it 'can add items' do
+        chiller = Chiller.new()
+        item = Item.new('FAKE', 100)
+        chiller.add(item)
+        expect(chiller.contents).to eq([item])
+    end
 end
