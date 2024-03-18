@@ -52,4 +52,9 @@ describe 'A refrigerator' do
         refrigerator.set_chiller_level(3)
         expect(refrigerator.chiller.temperature).to eq(55)
     end
+
+    it 'can set the freezer level' do
+        refrigerator.set_freezer_level(3)
+        expect(refrigerator.freezer.temperature).to eq(40)
+    end
 end
