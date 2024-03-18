@@ -22,4 +22,10 @@ describe 'A water reservoir' do
         reservoir.drain(5)
         expect(reservoir.current_water_volume).to eq(5)
     end
+
+    it 'wont allow the water volume to go negative when draining' do
+        reservoir.fill
+        reservoir.drain(50)
+        expect(reservoir.current_water_volume).to eq(0)
+    end
 end
