@@ -7,11 +7,17 @@ describe 'A water reservoir' do
         expect(water_reservoir.current_water_volume).to eq(0)
     end
 
-    # it "can be filled" do
-    #     water_reservoir = WaterReservoir.new
-    #     water_reservoir.fill
-    #     expect(water_reservoir.current_water_volume).to eq(10)
-    # end
+    it "can be filled" do
+        water_reservoir = WaterReservoir.new
+        water_reservoir.fill
+        expect(water_reservoir.current_water_volume).to eq(water_reservoir.capacity)
+    end
+
+    it "can be drained" do
+        water_reservoir = WaterReservoir.new(:initial_water_volume => 10)
+        water_reservoir.drain(10)
+        expect(water_reservoir.current_water_volume).to eq(0)
+    end
 
     it "cannot be less than empty" do
         water_reservoir = WaterReservoir.new
