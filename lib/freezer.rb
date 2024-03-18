@@ -19,6 +19,10 @@ class Freezer
     @power = :off
   end
 
+  def get_power
+    return @power
+  end
+
   def add(item)
     @contents << item
   end
