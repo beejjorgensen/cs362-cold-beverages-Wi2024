@@ -14,7 +14,7 @@ describe 'A vessel for holding liquid' do
   end
 
   it 'is no longer empty when we fill it' do
-    skip
+    # skip
     vessel = Vessel.new('FAKE', 100)
     vessel.fill
     expect(vessel).to_not be_empty

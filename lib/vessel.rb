@@ -7,7 +7,15 @@ class Vessel
   end
 
   def empty?()
-    return true
+    if(@volume == 0)
+      return false
+    else
+      return true
+    end
+  end
+
+  def fill()
+    @volume = 0
   end
 
 end
