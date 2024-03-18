@@ -2,7 +2,7 @@ class Freezer
 
   ROOM_TEMPERATURE = 70
 
-  attr_reader :capacity, :temperature, :contents
+  attr_reader :capacity, :temperature, :contents, :power
 
   def initialize(capacity = 100)
     @capacity = capacity
