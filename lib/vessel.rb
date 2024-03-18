@@ -6,4 +6,8 @@ class Vessel
     @volume = volume
   end
 
+  def empty?()
+    return true
+  end
+
 end
