@@ -1,6 +1,6 @@
 class Refrigerator
 
-  attr_reader :chiller, :freezer, :control_panel, :water_dispenser, :water_reservoir
+  attr_reader :chiller, :freezer, :control_panel, :water_dispenser, :water_reservoir, :power
 
   def initialize(chiller, freezer, water_dispenser, water_reservoir)
     @chiller = chiller
