@@ -12,4 +12,15 @@ describe 'A refrigerator' do
         expect(refrigerator.water_dispenser).to eq(water_dispenser)
         expect(refrigerator.water_reservoir).to eq(water_reservoir)
     end
+
+    it 'can chill item' do
+        chiller = Chiller.new(100)
+        freezer = Freezer.new(100)
+        water_reservoir = WaterReservoir.new()
+        water_dispenser = WaterDispenser.new(water_reservoir)
+        refrigerator = Refrigerator.new(chiller, freezer, water_dispenser, water_reservoir)
+        item = Item.new('FAKE', 100)
+        refrigerator.chill(item)
+        expect(refrigerator.chiller.contents).to eq([item])
+    end
 end

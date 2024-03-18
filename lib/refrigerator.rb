@@ -5,7 +5,6 @@ class Refrigerator
   def initialize(chiller, freezer, water_dispenser, water_reservoir)
     @chiller = chiller
     @freezer = freezer
-    # @control_panel = control_panel
     @water_dispenser = water_dispenser
     @water_reservoir = water_reservoir
     @power = :off
