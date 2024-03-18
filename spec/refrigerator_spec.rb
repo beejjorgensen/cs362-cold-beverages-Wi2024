@@ -1,5 +1,5 @@
 require_relative '../lib/refrigerator'
 
-describe 'A refrigerator' do
+describe 'A refrigerator' doz
 
 end
