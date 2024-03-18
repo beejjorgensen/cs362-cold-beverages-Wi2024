@@ -2,7 +2,7 @@ class Chiller
 
   ROOM_TEMPERATURE = 70
 
-  attr_reader :capacity, :temperature
+  attr_reader :capacity, :temperature, :power, :contents
 
   def initialize(capacity = 100)
     @capacity = capacity
