@@ -57,4 +57,8 @@ describe 'A refrigerator' do
         refrigerator.set_freezer_level(3)
         expect(refrigerator.freezer.temperature).to eq(40)
     end
+
+    it 'can return a to_s representation of the refrigerator' do
+        expect(refrigerator.to_s).to eq("Power: off\nStorage: 200 of 200 available\nTemps: Chiller is 70, Freezer is 70\nWater: Reservoir has 0 remaining.\n")
+    end
 end
