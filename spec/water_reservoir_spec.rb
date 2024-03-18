@@ -11,4 +11,10 @@ describe 'A water reservoir' do
         reservoir = WaterReservoir.new()
         expect(reservoir).to be_empty
     end
+
+    it 'is no longer empty when we fill it' do
+        reservoir = WaterReservoir.new()
+        reservoir.fill
+        expect(reservoir).to_not be_empty
+    end
 end
