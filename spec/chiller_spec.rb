@@ -9,6 +9,11 @@ describe 'A chiller' do
         expect(chiller.contents).to eq([])
     end
 
+    it 'can turn on' do
+        chiller = Chiller.new()
+        chiller.turn_on
+        expect(chiller.power).to eq(:on)
+    end
 
 
 end
