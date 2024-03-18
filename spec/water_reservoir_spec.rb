@@ -17,4 +17,11 @@ describe 'A water reservoir' do
         reservoir.fill
         expect(reservoir).to_not be_empty
     end
+
+    it 'can drain' do
+        reservoir = WaterReservoir.new()
+        reservoir.fill
+        reservoir.drain(5)
+        expect(reservoir.current_water_volume).to eq(5)
+    end
 end
